@@ -11,8 +11,8 @@ server.get('/', async (req, res) => {
 
 
 server.get('/:zip', (req, res) => {
-	const {zip} = req.params; 
-	res.status(200).json({ stateInfo:
+	const zip = parseInt(req.params.zip);
+	res.status(200).json({ [`${zip}`]:
 	db[zip]})
 })
 
