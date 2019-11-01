@@ -6,14 +6,13 @@ const db = require('../db')
 const server = express()
 
 server.get('/', async (req, res) => {
-	res.status(200).json({ api: 'running', data:
-	db['501']})
+	res.status(200).json({ api: 'running'})
 })
 
 
 server.get('/:zip', (req, res) => {
 	const {zip} = req.params; 
-	res.status(200).json({ api: 'running', data:
+	res.status(200).json({ stateInfo:
 	db[zip]})
 })
 
